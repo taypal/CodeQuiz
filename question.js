@@ -1,29 +1,56 @@
-// var timeEl = document.querySelector(".time");
-// var mainEl = document.getElementById("main");
+$(document).ready(function () {
+    var startQuiz = document.getElementById(".buttonStart").addEventListener("click", myFunction);
 
-// var secondsLeft = 10;
+    var questions = [
+    {
+        prompt: "Commonly used data types DO NOT include:",
+            choices: ["strings", "booleans", "alerts", "numbers"],
+                answer: "alerts"
+    },
+    {
+        prompt: "What is jQuery?",
+            choices: ["A programing langage", "a bird", "Javascript Code", "square brackets"],
+                answer: "Javascript Code"
+    },
+    {
+        prompt: "What is 'this'?",
+            choices: ["that.", "a method", "refers to the object", "this?"],
+                answer: "refers to the object"
+    },
+    {
+        prompt: "What type of scripting is jQuery",
+            choices: ["server", "javascript", "client", "all of the above"],
+                answer: "client"
+    },
+    {
+        prompt: "Which is the fastest selector in jQuery?",
+            choices: ["ID", "Elements", "query.selector", "both a & b"],
+                answer: "both a & b"
+        },
+    
+        // printvalues, function () {
+        //     returnthis.startQuiz
+        // }
+]
+    
+    
+    $(".button-start").on("click", function () {
+        var firstPage = $("<div>")
+        firstPage.text($(this.text("questions")),
+            $("#user").append(firstPage)
+        )}
 
-// function setTime() {
-//   var timerInterval = setInterval(function() {
-//     secondsLeft--;
-//     timeEl.textContent = secondsLeft + " seconds left till colorsplosion.";
+    var score = 0;
 
-//     if(secondsLeft === 0) {
-//       clearInterval(timerInterval);
-//       sendMessage();
-//     }
+    for (i = 0; i < questions.length; i++) {
+        var response = window.prompt(questions[i].prompt);
+        if (response === questions[i].answer) {
+            score++;
+            alert("You Got It!");
+        } else {
+            alert("Incorrect!");
+        }
+        alert("You scored" + score + "/" + questions.length)
+    };
 
-//   }, 1000);
-// }
-
-// function sendMessage() {
-//   timeEl.textContent = " ";
-
-//   var imgEl = document.createElement("img");
-
-//   imgEl.setAttribute("src", "images/image_1.jpg");
-//   mainEl.appendChild(imgEl);
-
-// }
-
-// setTime();
+});
