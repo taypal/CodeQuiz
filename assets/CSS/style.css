@@ -1,0 +1,16 @@
+body {
+    background-color: #FBBED9;
+}
+
+.jumbotron {
+    background-color: #C879FF;
+    color: white;
+}
+
+.nav-link {
+    color: grey;
+}
+
+#clearScore {
+    margin-top: 15px;
+}

@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/CSS/style.css">
 </head>
 
 <body>
@@ -19,11 +20,9 @@
                     <div>
                         <ul class="nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="index.html">Take Quiz</a>
+                                <a class="nav-link" href="index.html">Reset Quiz</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="highscores" href="#">View Highscores</a>
-                            </li>
+
                             <li class="nav-item ml-auto">
                                 <p class="nav-link" id="timer">Time Left: <span id="time">0</span></p>
                             </li>
@@ -33,24 +32,26 @@
             </div>
 
             <div class="row  justify-content-center ">
-                <div class="col-12 colcontainer">
-                    <div class="jumbotron jumbotron-fluid text-center main">
+                <div class="col-12 container">
+                    <div class="jumbotron text-center">
                         <div class="container">
                             <h1 class="display-4" id="title">Code Quiz</h1>
                             <hr />
                             <p class="lead" id="quiz-question">Push "Start Quiz" to start the timer and test your
                                 knowledge</p>
+
+                            <hr />
+
+                            <div class="row justify-content-center">
+
+                                <div class="col-8 text-center" id="button-box">
+
+                                    <button type="button" id="start" class="btn btn-info">Start Quiz</button>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-
-                <div class="col-8 text-center" id="button-box">
-
-                    <button type="button" id="start" class="btn">Start Quiz</button>
-
                 </div>
 
                 <div class="col-8 text-center hide" id="form-box">
@@ -62,7 +63,8 @@
                             <input type="Name" class="form-control text-center" id="inputName">
 
                         </div>
-                        <button type="button" class="btn" id="submit">Submit Score</button>
+                        <button type="button" class="col-sm-6 btn btn-info" id="submit">Submit Score</button>
+
                     </form>
                 </div>
 
@@ -72,7 +74,7 @@
 
                     </ul>
 
-                    <button type="button" class="btn" id="clearScore">Clear Scores</button>
+                    <button type="button" class="btn btn-secondary" id="clearScore">Clear Scores</button>
 
 
                 </div>
