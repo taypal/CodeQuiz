@@ -24,4 +24,4 @@ They can then push "reset quiz" to beat the highscore and try again!
 
 ## Screen Recording
 
-![code quiz](/Users/taylorhouk/Developer/uofu/sandbox/Homework/CodeQuiz/assets/images/Code Quiz.gif)
+![code quiz](https://github.com/taypal/CodeQuiz/blob/master/assets/images/Code%20Quiz.gif)
