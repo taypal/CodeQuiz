@@ -76,8 +76,6 @@ $(document).ready(function () {
 
             var selected = $(this).attr("data-id")
             var answer = currentQuestion.answer
-            console.log(answer)
-            console.log(selected)
 
             if (answer === selected) {
                 count = count + 15
